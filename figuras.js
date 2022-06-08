@@ -1,36 +1,46 @@
-// Como crear console. agrupados o en grupitos, se hace de la sigueinte manera al principio console.group("name")-al final console.groupEnd();
+// Para poder modiicar las medidas de las figuras geometricas y no sean fijas en el codigo, si no qu pueden varias de acuerdo a l necesidad del solicitant se hace utilizando funciones
 
 // Codigo del cuadrado
 
 console.group("Cuadrado")
-var ladoCuadrado = 5;
-console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
+//var ladoCuadrado = 5;
+//console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
 
-var perimetroCuadrado = ladoCuadrado * 4;
-console.log("El perimetro cuadrado es: " + perimetroCuadrado + "cm");
+function perimetroCuadrado(lado){
+    return lado * 4;
+} 
 
-var areaCuadrado = ladoCuadrado * ladoCuadrado;
-console.log("El área del cuadrado es: " + areaCuadrado + "cm^2");
+//console.log("El perimetro cuadrado es: " + perimetroCuadrado + "cm");
+
+function areaCuadrado(lado){
+    return lado * lado;
+}
+
+//console.log("El área del cuadrado es: " + areaCuadrado + "cm^2");
 console.groupEnd();
 
 // codigo del triangulo
 
 console.group("Triangulo")
-var ladotriangulo1 = 6;
-var ladotriangulo2 = 6;
-var basetriangulo = 4;
+//var ladotriangulo1 = 6;
+//var ladotriangulo2 = 6;
+//var basetriangulo = 4;
 
-console.log("Los lados del tringulo miden: "+ ladotriangulo1 + "cm ," + ladotriangulo2 + "cm ," + basetriangulo + "cm")
+//console.log("Los lados del tringulo miden: "+ ladotriangulo1 + "cm ," + ladotriangulo2 + "cm ," + basetriangulo + "cm")
 
 
-var alturatriangulo = 5.5;
-console.log("La altura del Triangulo es: " + alturatriangulo + "cm")
+//var alturatriangulo = 5.5;
+//console.log("La altura del Triangulo es: " + alturatriangulo + "cm")
 
-var perimetroTriangulo = ladotriangulo1 + ladotriangulo2 + basetriangulo;
-console.log("El perimetro del triangulo es: " + perimetroTriangulo + "cm")
+function perimetroTriangulo(lado1,lado2,base){
+    return lado1 + lado2 + base;
+}
+//console.log("El perimetro del triangulo es: " + perimetroTriangulo + "cm")
 
-var areaTriangulo = (basetriangulo*alturatriangulo)/2;
-console.log("El area del tringulo es: " + areaTriangulo +"cm^2")
+function areaTriangulo(base, altura){
+    return (base * altura) / 2;
+} 
+//console.log("El area del tringulo es: " + areaTriangulo +"cm^2")
 
 console.groupEnd();
 
@@ -39,27 +49,34 @@ console.groupEnd();
 console.group("Circulo");
 
 // Radio
-var radioCirculo = 4;
-console.log("El radio del circulo es: " + radioCirculo + "cm")
+//var radioCirculo = 4;
+//console.log("El radio del circulo es: " + radioCirculo + "cm")
 
 // Diametro
-var diametroCirculo = radioCirculo * 2;
-console.log("El diametro del circulo es: " + diametroCirculo + "cm")
+function diametroCirculo(radio){
+    return radio * 2;
+} 
+//console.log("El diametro del circulo es: " + diametroCirculo + "cm")
 
 // PI
 
 var PI = Math.PI;
 console.log("PI es: " + PI)
 
-// Circunferencia
+// perimetro
 
-var circunferenciaCirculo = diametroCirculo * PI;
-console.log("La circunferencia del circulo es: " + circunferenciaCirculo + "cm")
+function perimetroCirculo(radio){
+    var diametro = diametroCirculo(radio);
+    return diametro * PI;
+}
+//console.log("La perimetro del circulo es: " + perimetroCirculo + "cm")
 
 //Área
 
-var areaCirculo = (radioCirculo * radioCirculo) * PI;
-console.log("El Área del circulo es: " + areaCirculo + "cm^2")
+function areaCirculo(radio){
+    return (radio * radio) * PI;
+}
+//console.log("El Área del circulo es: " + areaCirculo + "cm^2")
 
 console.groupEnd();
 
