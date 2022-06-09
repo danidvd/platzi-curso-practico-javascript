@@ -14,11 +14,36 @@
     <main>
         <section>
             <h2>Calcula el perimetro y el area de un Cuadrado</h2>
-            <form action="">
-                <label for="InputCuadrado">Escribe cuanto mide cada lado del cuadrado</label>
-                <input id="InputCuadrado" type="number">
-                <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
+            <form class="FormCuadro" action="">
+                <label for="InputCuadrado">
+                    <span>Escribe cuanto mide cada lado del cuadrado</span>
+                    <input id="InputCuadrado" type="number">
+                </label>               
+                <br><button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
                 <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
+            </form>
+        </section>
+        <section>
+            <h2>Calcula el perimetro y el area de un Triangulo</h2>
+            <form class="FormTriangulo" action="">
+                <label for="InputLadoDerecho">
+                    <span>Escribe cuanto mide el lado derecho del tringulo</span>
+                    <input id="InputLadoDerecho" type="number">
+                </label>
+                <br><label for="InputLadoIzquierdo">
+                    <span>Escribe cuanto mide el lado izquierdo del tringulo</span>
+                    <input id="InputLadoIzquierdo" type="number">
+                </label>
+                <br><label for="InputBase">
+                    <span>Escribe cuanto mide la base del tringulo</span>
+                    <input id="InputBase" type="number">
+                </label>
+                <br><label for="InputAltura">
+                    <span>Escribe cual es la altura del tringulo</span>
+                    <input id="InputAltura" type="number">
+                </label>
+                <br><button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
+                <button type="button" onclick="calcularAreaTriangulo()">Calcular el area</button>
             </form>
         </section>
     </main>

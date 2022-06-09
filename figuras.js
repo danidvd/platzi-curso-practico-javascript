@@ -96,5 +96,24 @@ function calcularAreaCuadrado(){
     alert(area);
 }
 
+function calcularPerimetroTriangulo(){
+    var derecho = document.getElementById("InputLadoDerecho");
+    var valuederecho = parseInt (derecho.value);
+    var izquierdo = document.getElementById("InputLadoIzquierdo");
+    var valueizquierdo = parseInt (izquierdo.value);
+    var base = document.getElementById("InputBase");
+    var valuebase = parseInt (base.value);
+    var perimetro2 = perimetroTriangulo(valuederecho,valueizquierdo,valuebase);
+    alert(perimetro2);
+}
+
+function calcularAreaTriangulo(){
+    var base = document.getElementById("InputBase");
+    var valuebase = base.value;
+    var altura = document.getElementById("InputAltura");
+    var valuealtura = altura.value;
+    var aera2 = areaTriangulo(valuebase,valuealtura);
+    alert(aera2);
+}
 
 
