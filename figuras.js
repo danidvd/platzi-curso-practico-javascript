@@ -116,4 +116,17 @@ function calcularAreaTriangulo(){
     alert(aera2);
 }
 
+function calcularPerimetroCirculo(){
+    var radio = document.getElementById("InputRadio");
+    var valueradio = parseInt (radio.value);
+    var diametro = diametroCirculo(valueradio);
+    var perimetro3 = perimetroCirculo(valueradio);
+    alert(perimetro3);
+}
 
+function calcularAreaCirculo(){
+    var radio = document.getElementById("InputRadio");
+    var valueradio = parseInt (radio.value);
+    var area3 = areaCirculo(valueradio);
+    alert(area3);
+}
