@@ -5,25 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geometricas | Curso practico JavaScrpti</title>
+    <!--Esta etiqueta es para enlzara archivo CSS con html-->
+    <link rel="stylesheet" href="./figuras.css">
 </head>
 <body>
     <header>
-        <h1><strong>¡Figuras Geometricas!</strong></h1>
-        <p>Este es el primer taller del curso practico de Javascript</p>
+        <section class="logo">
+            <img src="./figuras.jpg" alt="">
+        </section>
+        <section class="itemHeader"><h1><strong>¡Figuras Geometricas!</strong></h1>
+            <p>Este es el primer taller del curso practico de Javascript</p>
+        </section>
+        <section class="navigation">
+            <nav>
+                <ul>
+                    <a href="">Inicio</a>
+                    <a href="">Acerca de</a>
+                </ul>
+            </nav>
+        </section>
     </header>
     <main>
-        <section>
+        <section class="cuadrado">
             <h2>Calcula el perimetro y el area de un Cuadrado</h2>
             <form class="FormCuadro" action="">
                 <label for="InputCuadrado">
                     <span>Escribe cuanto mide cada lado del cuadrado</span>
                     <input id="InputCuadrado" type="number">
                 </label>               
-                <br><button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
-                <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
+                <br><button type="button" onclick="calcularPerimetroCuadrado()"><strong>Calcular el perimetro</strong></button>
+                <button type="button" onclick="calcularAreaCuadrado()"><strong>Calcular el area</strong></button>
             </form>
         </section>
-        <section>
+        <section class="triangulo">
             <h2>Calcula el perimetro y el area de un Triangulo</h2>
             <form class="FormTriangulo" action="">
                 <label for="InputLadoDerecho">
@@ -42,23 +56,27 @@
                     <span>Escribe cual es la altura del tringulo</span>
                     <input id="InputAltura" type="number">
                 </label>
-                <br><button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
-                <button type="button" onclick="calcularAreaTriangulo()">Calcular el area</button>
+                <br><button type="button" onclick="calcularPerimetroTriangulo()"><strong>Calcular el perimetro</strong></button>
+                <button type="button" onclick="calcularAreaTriangulo()"><strong>Calcular el area</strong></button>
             </form>
         </section>
-        <section>
+        <section class="circulo">
             <h3>Calcula el perimetro y el area de un circulo</h3>
-            <form action="FormCirculo">
+            <form action="">
                 <label for="InputRadio">
                     <span>Escribe cuanto es el radio del circulo</span>
                     <input id="InputRadio" type="number">
-                <br><button type="button" onclick="calcularPerimetroCirculo()">Calcular el perimetro</button>
-                <button type="button" onclick="calcularAreaCirculo()">Calcular el area</button>
+                <br><button type="button" onclick="calcularPerimetroCirculo()"><strong>Calcular el perimetro</strong></button>
+                <button type="button" onclick="calcularAreaCirculo()"><strong>Calcular el area</strong></button>
                 </label>
             </form>
         </section>
     </main>
-
+    <footer>
+        <p>Todos los derechos reservados</p>
+    </footer>
+<!--Esta etiqueta es para enlazar archivo JS con html-->
     <script src="./figuras.js"></script>
 </body>
 </html>
+
