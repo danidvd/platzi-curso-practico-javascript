@@ -79,6 +79,8 @@ form {
 
 input {
     margin: 1rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .cuadrado {
