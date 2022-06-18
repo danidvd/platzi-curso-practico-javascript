@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentajes y descuentos | Curso Práctico Javascript</title>
+</head>
+<body>
+    <header>
+        <h1>Porcentajes y descuentos</h1>
+        <p>Este es el segundo taller del curso practico de Javascript</p>
+    </header>
+    <section>
+        <h2>Calcula el precio a pagar de tus productos por descuentos</h2>
+        <form action="">
+            <label for="InputPrecio">
+                <span>Escribe el precio de tu producto</span>
+                <input id="InputPrecio" type="number">
+            </label>
+            <label for="InputDescuento">
+                <span>Escribe el descuento de tu producto</span>
+                <input id="InputDescuento" type="number">
+            </label>
+            <!--El button type button evita que la pagina se me recargue cual el usuario mande la ifnromacion , la opcion onclick,me activa la function que he dado a JavaScipt-->
+            <button type="button" onclick="onClickButonPrecioDescuento()">Calcula el precio con descuento</button>
+            <strong><p id="ResultadoPrecio"></p></strong>
+        </form>
+    </section>
+    <section>
+        <h3>Calcular el tiempo y valor a pagar a trabajador (Minutos)</h3>
+        <form action="">
+            <label for="InputEntrada">
+                <span>Ingresa la hora de entrada</span>
+                <input id="InputEntrada" type="time">
+            </label>
+            <label for="InputSalida">
+                <span>Ingresa la hora de salida</span>
+                <input id="InputSalida" type="time">
+            </label>
+            <button type="button" onclick="onClickTiempoTrabajado()">Calcula tiempo trabajado y valor a pagar</button>
+            <strong><p id="resultadovalor"></p></strong>
+            <strong><p id="resultadoTiempo"></p></strong>
+        </form>
+    </section>
+    <script src="./descuentos.js"></script>
+</body>
+</html>
