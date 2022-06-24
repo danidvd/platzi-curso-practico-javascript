@@ -15,23 +15,63 @@ function onClickButonPrecioDescuento(){
     ResultadoPrecio.innerText = "El precio con descuento es $" + precioConDescuento
 }
 
-var salarioNetoMensual = 1344000;
-
-function calcularSalarioMinuto(){
-    var valorMinutos = (salarioNetoMensual/30)/1440;
-    return valorMinutos;
+function calcularHoraTrabajo(horasalida,horaentrada){
+    var horatrabajo = horasalida - horaentrada;
+    if (horasalida < horaentrada){
+        alert("La hora de salida es menor que la hora de entrada")
+    }
+    return horatrabajo;
 }
 
-function tiempoTrabajo(entrada,salida){
-    return parceint(entrada - salida);
+function calcularMinutoTrabajo(minutosalida,minutoentrada){
+    var minutotrabajo = minutosalida - minutoentrada;
+    if (minutotrabajo < 0){
+        minutotrabajo = minutotrabajo * -1;
+        return minutotrabajo;
+    }
+    return minutotrabajo;
 }
 
-function onClickTiempoTrabajado(){
-    var inputEntrada = document.getElementById("InputEntrada");
-    var entrada = parceint(inputEntrada.value);
-    var inputSalida = document.getElementById("InputSalida");
-    var salida = parceint(inputSalida.value);
-    var tiempoTrabajo = tiempoTrabajo(entrada,salida);
-    var resultadoTiempo = document.getElementById("resultadoTiempo");
-    resultadoTiempo.innerText = "El tiempo trabajado fue " + tiempoTrabajo;
+function sumaMinutos(horatrabajo,minutotrabajo){
+    var totalminutos = (horatrabajo * 60) + minutotrabajo;
+    return totalminutos;
 }
+
+var salario = 3700
+
+function onclickCalcularTotalMinutos(){
+    var inputEntradaHora = document.getElementById("InputEntradaHora");
+    var EntradaHoraValue = inputEntradaHora.value;
+    var inputSalidaHora = document.getElementById("InputSalidaHora");
+    var SalidaHoraValue = inputSalidaHora.value;
+    var totalHoraTrabajo = calcularHoraTrabajo(SalidaHoraValue,EntradaHoraValue);
+
+    var inputEntradaMinuto = document.getElementById("InputEntradaMinuto");
+    var EntradaMinutoValue = inputEntradaMinuto.value;
+    var inputSalidaMinuto = document.getElementById("InputSalidaMinuto");
+    var SalidaMinutoValue = inputSalidaMinuto.value;
+    var totalMinutoTrabajo = calcularMinutoTrabajo(SalidaMinutoValue,EntradaMinutoValue);
+
+    var totalMinutosTrabajados = sumaMinutos(totalHoraTrabajo,totalMinutoTrabajo);
+
+    var totalaPagar = (totalMinutosTrabajados/60) * salario;
+
+    var ResultadoHora = document.getElementById("ResultadoHora");
+    ResultadoHora.innerText = "Las horas laboradas fueron : " + totalHoraTrabajo + " horas";
+
+    var ResultadoMinuto = document.getElementById("ResultadoMinuto");
+    ResultadoMinuto.innerText = "Los minutos laborados fueron : " + totalMinutoTrabajo + " minutos";
+
+    var ResultadoTotalMinuto = document.getElementById("ResultadoTotalMinuto");
+    ResultadoTotalMinuto.innerText = "El total de minutos laborados fue : " + totalMinutosTrabajados + " minutos";
+
+    var ResultadoPagar = document.getElementById("ResultadoPagar");
+    ResultadoPagar.innerText = "El total a pagar por el tiempo trabajado es : $ " + totalaPagar ;
+
+    console.log(totalHoraTrabajo);
+    console.log(totalMinutoTrabajo);
+    console.log(totalMinutosTrabajados);
+    console.log(totalaPagar);
+}
+
+
