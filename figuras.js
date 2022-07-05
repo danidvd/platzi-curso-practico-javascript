@@ -86,14 +86,18 @@ function calcularPerimetroCuadrado(){
     var input = document.getElementById("InputCuadrado");
     var value = input.value;
     var perimetro = perimetroCuadrado(value);
-    alert(perimetro);
+  
+    var ResultadoPerimetroCuadrado = document.getElementById("ResultadoPerimetroCuadrado");
+    ResultadoPerimetroCuadrado.innerText = "El perimetro del cuadrado es " + perimetro
 }
 
 function calcularAreaCuadrado(){
     var input = document.getElementById("InputCuadrado");
     var value = input.value;
     var area = areaCuadrado(value);
-    alert(area);
+
+    var ResultadoAreaCuadrado = document.getElementById("ResultadoAreaCuadrado");
+    ResultadoAreaCuadrado.innerText = "El area del cuadrado es " + area
 }
 
 function calcularPerimetroTriangulo(){
@@ -104,7 +108,9 @@ function calcularPerimetroTriangulo(){
     var base = document.getElementById("InputBase");
     var valuebase = parseInt (base.value);
     var perimetro2 = perimetroTriangulo(valuederecho,valueizquierdo,valuebase);
-    alert(perimetro2);
+
+    var ResultadoPerimetroTriangulo = document.getElementById("ResultadoPerimetroTriangulo");
+    ResultadoPerimetroTriangulo.innerText = "El perimetro del triangulo es " + perimetro2
 }
 
 function calcularAreaTriangulo(){
@@ -113,7 +119,9 @@ function calcularAreaTriangulo(){
     var altura = document.getElementById("InputAltura");
     var valuealtura = altura.value;
     var aera2 = areaTriangulo(valuebase,valuealtura);
-    alert(aera2);
+
+    var ResultadoAreaTriangulo = document.getElementById("ResultadoAreaTriangulo");
+    ResultadoAreaTriangulo.innerText = "El area del triangulo es " + aera2
 }
 
 function calcularPerimetroCirculo(){
@@ -121,12 +129,16 @@ function calcularPerimetroCirculo(){
     var valueradio = parseInt (radio.value);
     var diametro = diametroCirculo(valueradio);
     var perimetro3 = perimetroCirculo(valueradio);
-    alert(perimetro3);
+
+    var ResultadoPerimetroCirculo = document.getElementById("ResultadoPerimetroCirculo");
+    ResultadoPerimetroCirculo.innerText = "El perimetro del circulo es " + perimetro3
 }
 
 function calcularAreaCirculo(){
     var radio = document.getElementById("InputRadio");
     var valueradio = parseInt (radio.value);
     var area3 = areaCirculo(valueradio);
-    alert(area3);
+
+    var ResultadoAreaCirculo = document.getElementById("ResultadoAreaCirculo");
+    ResultadoAreaCirculo.innerText = "El area del circulo es " + area3
 }
